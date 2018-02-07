@@ -41,7 +41,9 @@ route.route({
     },
   },
   handler: async (ctx) => {
+    // The request is verified
     const verifiedRequest = await verifyRequest(ctx.request)
+    // We set the status and the body of the response
     ctx.status = verifiedRequest.code
     ctx.body = verifiedRequest
   }

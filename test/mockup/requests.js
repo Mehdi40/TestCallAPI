@@ -1,5 +1,7 @@
+// Importing needed modules
 import config from '../../config/config'
 
+// Creating some fake data
 const fakeRequestWithoutPicture = {
   username: 'Oui',
   mail: 'oui@oui.oui',

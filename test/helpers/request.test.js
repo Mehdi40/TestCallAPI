@@ -1,11 +1,10 @@
+// Importing needed modules
 import chai from 'chai'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
 chai.use(sinonChai)
 const should = chai.should()
 import 'babel-polyfill'
-
-
 import verifyRequest from '../../helpers/request'
 import {
   fakeRequestWithoutFaces,
@@ -14,7 +13,9 @@ import {
   fakeRequestWithMultipleFaces,
 } from '../mockup/requests'
 
+// Describing the function we're testing
 describe('[Request Helper] - verifyRequest', async () => {
+  // Establishing the multiples cases
   it('should return a 404 error message if no picture is provided', async () => {
     const p = await verifyRequest({body: fakeRequestWithoutPicture})
 
